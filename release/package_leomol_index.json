@@ -1,0 +1,43 @@
+{
+	"packages":
+	[
+		{
+			"name":"bridge",
+			"maintainer":"leonardomt@gmail.com",
+			"websiteURL":"https://github.com/leomol/arduino-bridge",
+			"email":"leonardomt@gmail.com",
+			"help":
+			{
+				"online":"https://github.com/leomol/arduino-bridge"
+			},
+			"platforms":
+			[
+				{
+					"name":"Bridge",
+					"architecture":"avr",
+					"version":"0.1.0",
+					"category":"Contributed",
+					"url":"https://raw.githubusercontent.com/leomol/arduino-bridge/master/release/bridge-0.1.0.zip",
+					"archiveFileName":"bridge-0.1.0.zip",
+					"checksum":"SHA-256:b48ae08839513296cbfa62bd65e1e3e64cec6b9e4595efe68678b6dfac5f60e5",
+					"size":"85764",
+					"help":
+					{
+						"online":"https://github.com/bridge/arduino-bridge"
+					},
+					"boards":
+					[
+						{"name": "Arduino Uno"},
+						{"name": "Arduino Mega 2560"}
+					],
+					"toolsDependencies":
+					[
+					]
+				}
+			],
+			"tools":
+			[
+			]
+		}
+	]
+}
