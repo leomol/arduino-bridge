@@ -15,12 +15,12 @@
 				{
 					"name":"Bridge",
 					"architecture":"avr",
-					"version":"0.1.0",
+					"version":"0.1.1",
 					"category":"Contributed",
-					"url":"https://raw.githubusercontent.com/leomol/arduino-bridge/master/release/bridge-0.1.0.zip",
+					"url":"https://raw.githubusercontent.com/leomol/arduino-bridge/master/release/bridge-0.1.1.zip",
 					"archiveFileName":"bridge-0.1.0.zip",
-					"checksum":"SHA-256:b48ae08839513296cbfa62bd65e1e3e64cec6b9e4595efe68678b6dfac5f60e5",
-					"size":"85764",
+					"checksum":"SHA-256:b01faf01c7bd4e1bb0f56ef5cabd3b012941396265d5f512bb2e5a639adcc7b8",
+					"size":"86407",
 					"help":
 					{
 						"online":"https://github.com/bridge/arduino-bridge"

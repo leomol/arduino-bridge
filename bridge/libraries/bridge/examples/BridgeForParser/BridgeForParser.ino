@@ -6,7 +6,7 @@
  * @author Leonardo Molina (leonardomt@gmail.com).
  * @file BridgeForParser.ino
  * @date 2019-02-10
- * @version: 0.1.190224
+ * @version: 0.1.191005
 */
 
 #include "DigitalInput.h"
@@ -15,6 +15,7 @@
 
 using namespace bridge;
 
+const bool debug = false;
 const uint8_t touchPeriods = 35;				///< Lick sensor - Number of periods to test.
 const uint8_t touchThreshold = 35;				///< Lick sensor - Percentage from baseline for touch detection.
 const  int8_t touchSensorPins[] = {42, 43};		///< Lick sensor - Lick sensor pins.
@@ -47,13 +48,22 @@ void setup() {
 	Serial.begin(115200);
 	status = Status::handshake;
 	handshake();
+	
+	if (debug) {
+		encodeState(framePin, frame.GetState());
+		frameRequested = true;
+	}
 }
 
 /// Greet party.	
 void handshake() {
-	Serial.write(255);
-	Serial.write(255);
-	Serial.write(255);
+	if (debug) {
+		Serial.println("!!!");
+	} else {
+		Serial.write(255);
+		Serial.write(255);
+		Serial.write(255);
+	}
 }
 
 /// Arduino library loop: Update all steppers and read serial port.
@@ -114,7 +124,10 @@ void onTouchSensor(TouchSensor* touchSensor, bool state) {
 
 /// Encode pin in 7 bits and its state in 1 bit.
 void encodeState(uint8_t hid, bool state) {
-	Serial.write(state ? hid + 127 : hid);
+	if (debug)
+		Serial.println(String() + hid + ":" + state);
+	else
+		Serial.write(state ? hid + 127 : hid);
 }
 
 

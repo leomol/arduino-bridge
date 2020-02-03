@@ -29,7 +29,8 @@ Library updates (including example code) will be shown as a pop-up at the bottom
 * `LapCounterIRx5`: Code to count laps in a square maze (unpublished work).
 
 ## Troubleshooting
-The compilation/upload process will fail if `Arduino IDE` finds conflicting code. Solution: remove `Documents/Arduino/Bridge`, `Documents/Arduino/libraries/Bridge`, and any files inside `Documents/Arduino` that use the namespace `bridge`.
+* The compilation/upload process will fail if `Arduino IDE` finds conflicting code. Solution: remove `Documents/Arduino/Bridge`, `Documents/Arduino/libraries/Bridge`, and any files inside `Documents/Arduino` that use the namespace `bridge`.
+* `Bridge examples` won't be shown in the menu unless a board from the category `Bridge AVR Boards` is selected. Solution: select a board from `Bridge AVR Boards` first.
 
 ## Version History
 ### 0.1.0
@@ -37,7 +38,7 @@ The compilation/upload process will fail if `Arduino IDE` finds conflicting code
 
 ## License
 This project is licensed under the [GNU GPLv3 License][LICENSE.md].
-© 2019 [Leonardo Molina][Leonardo Molina]
+© 2020 [Leonardo Molina][Leonardo Molina]
 
 [Leonardo Molina]: https://github.com/leomol
 [Arduino IDE]: https://www.arduino.cc/en/Main/Software
